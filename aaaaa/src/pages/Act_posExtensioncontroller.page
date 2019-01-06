@@ -1,0 +1,7 @@
+<apex:page standardController="Account" extensions="PositionExtension">
+{!PositionSalary} <p/>
+<apex:form >
+<apex:inputField value="{!Account.name}"/> <p/>
+<apex:commandButton value="Save" action="{!save}"/>
+</apex:form>
+</apex:page>

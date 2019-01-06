@@ -1,0 +1,7 @@
+<apex:page standardController="Bill__c" >
+    <apex:form >
+        <apex:pageBlock title="Hello {!$User.FirstName}!">
+     <apex:commandButton action="{!save}" value="Genrate_kr_bill"/>
+            </apex:pageBlock>
+    </apex:form>apex:form>
+ </apex:page>
