@@ -1,0 +1,26 @@
+<apex:page >
+    <apex:form >
+ <apex:pageBlock title="ALPANA">
+ <apex:pageBlockButtons >
+ <apex:commandButton value="click" action="http://www.google.com"/> 
+ <apex:commandButton value="SAVE" action="{!save}" dir="VIVEK" disabled="false"/>
+ </apex:pageBlockButtons> > 
+     Hi<br/>I am MAMTA <br/> I am here
+ </apex:pageBlock> >
+        
+        
+  <apex:pageBlock title="VIVEK G">
+      <apex:pageBlockButtons location="both">
+          <apex:commandButton value="click" action="http://www.google.com"/> 
+ <apex:commandButton value="SAVE" action="{!save}" dir="VIVEK" disabled="true"/>
+ 
+          <br/> Hi<br/>I am MAMTA <br/> I am here
+     </apex:pageBlockButtons>  
+        </apex:pageBlock>
+          
+        
+        
+        
+        
+ </apex:form>       
+ </apex:page>

@@ -1,0 +1,12 @@
+<apex:page >
+<apex:form >
+<script>
+function show()
+{
+    alert('Hi')
+}
+    </script>
+        <apex:commandButton value="clickl" onclick="show()"/>
+    
+</apex:form>
+</apex:page>

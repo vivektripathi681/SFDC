@@ -1,0 +1,39 @@
+<apex:page >
+<apex:form >
+<apex:pageBlock title="Registration">
+<apex:outputLabel >
+<br/> Name
+</apex:outputLabel>   
+    
+    <apex:inputText /><br/>
+<apex:outputLabel >
+<br/> Password
+</apex:outputLabel> 
+    <apex:inputText /><br/>
+    <br/> <apex:pageBlockSection title="MAMTA">
+
+<apex:outputLabel >
+<br/> Phone Number
+</apex:outputLabel>
+<apex:inputText />
+<apex:outputLabel >
+<br/>Email Id
+ </apex:outputLabel>
+    <apex:inputText /><br/>
+<apex:pageBlockSectionItem >
+ <apex:outputLabel >
+ <br/>Address
+ </apex:outputLabel> 
+ <apex:inputText />
+</apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem >
+<apex:outputLabel >
+<br/>City
+</apex:outputLabel>
+</apex:pageBlockSectionItem>
+</apex:pageBlockSection>
+ </apex:pageBlock>
+</apex:form>    
+    
+    
+</apex:page>

@@ -1,0 +1,15 @@
+<apex:page id="PG" controller="vfcodecontroller10">
+    <apex:form id="FRM">
+        
+       <apex:pageMessages id="PM"/>
+        <apex:pageBlock id="PB">
+            <apex:commandLink value="see magic" action="{!DisplayCode}">
+                <apex:param assignTo="{!CurrentPageName}" value="{!$CurrentPage.Name}"/>
+               </apex:commandLink>
+            <apex:outputPanel id="OPT" rendered="{!showcodesection}">
+                <apex:outputLabel value="{!pagetext}"/>
+                
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

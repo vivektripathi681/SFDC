@@ -1,0 +1,5 @@
+<apex:page standardController="account" renderAs="PDF">
+    <c:attachment />
+    <apex:pageBlock title="Preview the Attachment for {!account.name}">
+</apex:pageBlock>
+</apex:page>

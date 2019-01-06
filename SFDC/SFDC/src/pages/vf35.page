@@ -1,0 +1,15 @@
+<apex:page >
+    <apex:form >
+        <script>
+        function show()
+        {
+            var abc='{!$User.FirstName}';
+            document.getElementById('{!$Component.Two}').style.widith='100px';
+            document.getElementById('{!$Component.Two}').innerHTML='I am checked';
+            document.getElementById('{!$Component.three}').value='I am checked';
+        }
+        </script>
+        <apex:outputLabel id="two"></apex:outputLabel>
+        <apex:commandButton id="three" value="click" oncomplete="show()"/>
+    </apex:form>
+</apex:page>

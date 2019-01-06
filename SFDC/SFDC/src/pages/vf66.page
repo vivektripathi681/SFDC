@@ -1,0 +1,8 @@
+<apex:page controller="MyAttachement">
+    <apex:form >
+        
+        <apex:inputText value="{!myname}"/>
+        <apex:commandButton value="click" action="{show}"/>
+    </apex:form>
+   
+</apex:page>

@@ -1,0 +1,18 @@
+<apex:page controller="AccountSearch" >
+    <apex:form >
+         <apex:outputLabel > Customer Name </apex:outputLabel>
+        <apex:inputText value="{!USERNAME}" />
+    <apex:pageBlock rendered="{!NOT(ISNULL(Acc))}">
+     <apex:pageBlockTable value="{!Acc}" var="a">
+         <apex:column value="{!a.AccountNumber}"/>
+         <apex:column value="{!a.name}"/> 
+         <apex:column value="{!a.id}"/>
+         <apex:column value="{!a.industry}"/>
+        </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:commandButton value="Customer Search" action="{!show}"/>
+          
+            <apex:commandButton disabled="{!EnableButton}"  value="CreateCustomer" action="{!CreateCustomer}"/>
+    </apex:form>
+
+</apex:page>

@@ -1,0 +1,9 @@
+<apex:page controller="Example3">
+    <apex:form >
+    <apex:outputLabel > Enater Name</apex:outputLabel>
+     <apex:inputText />
+      
+  <apex:commandButton value="click" status="open"/>
+    <apex:outputLabel > {!name}</apex:outputLabel>
+    </apex:form>
+</apex:page>

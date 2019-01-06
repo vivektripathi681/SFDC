@@ -1,0 +1,36 @@
+<apex:page controller="DynamicTableControllerse9">
+    
+<apex:pageBlock >
+    <apex:form >
+        <apex:actionFunction name="ObjectFields" action="{!ObjectFields}"/>
+        <apex:commandButton value="Show Table" action="{!ShowTable}"/>
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Select Object"/>
+                <apex:selectList multiselect="false" size="1" value="{!SelectedObject}" onchange="ObjectFields();">
+                    <apex:selectOption itemLabel="--none--" itemValue="--none"/>
+                    <apex:selectOptions value="{!supportedObject}"/>
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Select Field"/>
+                <apex:selectList multiselect="true" size="5" value="{!SelectdFields}">
+                    <apex:selectOption itemLabel="--none--" itemValue="none"/>
+                        <apex:selectOptions value="{!fieldLabelAPI}"/>
+                 </apex:selectList>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockTable rendered="{!IF(ObjectList.size>0,true,false)}" value="{!ObjectList}" var="rec">
+                <apex:column value="{!rec.Id}" rendered="{!IF(SelectdFields.size==0,true,false)}"/>
+                <apex:repeat value="{!SelectdFields}" var="FieldLabel">
+                    <apex:column value="{!rec[FieldLabel]}" rendered="{!IF(FieldLabel!='--none--',true,false)}"/>
+                </apex:repeat>
+            </apex:pageBlockTable>
+            <apex:outputPanel rendered="{!IF(ObjectList.size<1,true,false)}">
+                <apex:pageMessage severity="ERROR" summary="no records to display"/>
+              
+            </apex:outputPanel>
+        </apex:pageBlockSection>
+    </apex:form>
+ </apex:pageBlock>                       
+                     
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page >
+    <apex:form >
+        <apex:outputLabel > select industry</apex:outputLabel>
+        &nbsp;&nbsp;
+        <apex:selectList size="1">
+            <apex:selectOption itemLabel="Govt" itemValue="govt"/>
+            <apex:selectOption itemLabel="Banking" itemValue="bank"/>
+            <apex:selectOption itemLabel="IT" itemValue="it"/>
+            <apex:selectOption itemLabel="Finance" itemValue="fin"/>
+        </apex:selectList>
+        <apex:include pageName="apexinclude"/>
+    </apex:form>
+</apex:page>

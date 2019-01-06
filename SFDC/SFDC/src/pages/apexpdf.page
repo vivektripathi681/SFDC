@@ -1,0 +1,20 @@
+<apex:page standardController="Account" renderAs="pdf" applyBodyTag="false">
+    <head>
+        <style>
+            body {font-family:Calibri font:italic;color:Red;}
+            .companyName {font:italic 30px;color:Green;}
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>ALPANAVIVEK</h1>
+            <apex:panelGrid columns="1" width="100%">
+                
+                <apex:outputText value="{!$User.FirstName}" styleClass="companyName"/>
+                <apex:outputText value="{!$User.LastName}" styleClass="companyName"/>
+                <apex:outputText value="{!Account.Id}" styleClass="companyName"/>
+                <apex:outputText value="{!NOW()}"/>
+            </apex:panelGrid>
+        </center>
+    </body>
+</apex:page>

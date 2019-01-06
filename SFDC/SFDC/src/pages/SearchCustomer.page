@@ -1,0 +1,33 @@
+<apex:page controller="createCustomer" >
+    <style>
+    one
+        {
+        color:blue;
+        }
+    </style>
+    <apex:form >
+        
+        <apex:pageBlock title="Create customer">
+            
+            <apex:pageBlock >
+             <apex:page ><br/><Right><apex:image url="https://c.ap5.visual.force.com/resource/1535024820000/Company_logo" width="41" height="10"/></Right></apex:page>
+           </apex:pageBlock>
+            <apex:outputLabel >First Name</apex:outputLabel>
+            <inputtext id="one"/>
+        <apex:inputText value="{!FirstName}"/>
+            <apex:inputText /> <br/>
+            <apex:outputLabel >Last Name</apex:outputLabel>
+            <apex:inputText value="{!LastName}"/>
+            <apex:inputText /> <br/>
+            <apex:outputLabel >Address</apex:outputLabel>
+            <apex:inputText value="{!Address}"/>
+            <apex:inputText /> <br/>
+            <apex:outputLabel >Phone Number</apex:outputLabel>
+            <apex:inputText value="{!PhoneNumber}"/>
+            <apex:inputText /> <br/>
+             <apex:commandButton value="CreateCustomer" action="{!show}"/>
+            <apex:commandButton value="Save" action="Save"/>
+           
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

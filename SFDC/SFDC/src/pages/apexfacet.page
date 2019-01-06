@@ -1,0 +1,16 @@
+<apex:page standardController="Account" recordSetVar="items">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!items}" var="a">
+                <apex:column >
+                    <apex:facet name="header">Action</apex:facet>
+                    <apex:commandLink value="edit" action="/{!a.id}/e?retURL={!a.id}"/>
+                    &nbsp;&nbsp;
+                    <apex:commandLink value="delete" action="URLFOR ($Action.Account.delete,a.id)"/>
+                    <apex:facet name="footer">this my v footer</apex:facet>
+                </apex:column>
+                <apex:column value="{!a.name}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

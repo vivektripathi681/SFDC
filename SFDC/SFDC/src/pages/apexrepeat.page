@@ -1,0 +1,6 @@
+<apex:page standardController="Account" recordSetVar="items">
+    <apex:repeat value="{!items}" var="a">
+        <apex:outputText value="{!a.Name}">
+        </apex:outputText>
+    </apex:repeat>
+</apex:page>

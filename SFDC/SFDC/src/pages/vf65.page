@@ -1,0 +1,9 @@
+<apex:page standardController="Account" renderAs="pdf">
+ <apex:pageBlock >
+  <apex:pageBlockSection >
+      <apex:outputField value="{!account.name}"/><br/>
+      <apex:outputField value="{!account.industry}"/>
+     </apex:pageBlockSection>
+  </apex:pageBlock>
+    
+</apex:page>

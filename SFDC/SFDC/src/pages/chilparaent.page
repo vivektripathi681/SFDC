@@ -1,0 +1,16 @@
+<apex:page controller="chilparaent" >
+    <apex:form >
+         <apex:outputLabel > Customer Name </apex:outputLabel>
+        <apex:inputText value="{!USERNAME}" />
+    <apex:pageBlock rendered="{!NOT(ISNULL(CONT))}">
+     <apex:pageBlockTable value="{!Cont}" var="a">
+         <apex:column value="{!a.name}"/> 
+         <apex:column value="{!a.Account.name}"/>
+         <apex:column value="{!a.Account.industry}"/>
+        </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:commandButton value="click" action="{!show}"/>
+          
+            <apex:commandButton value="CreateCustomer" action="{!CreateCustomer}"/>
+    </apex:form>
+</apex:page>

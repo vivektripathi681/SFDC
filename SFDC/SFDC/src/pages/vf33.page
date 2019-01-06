@@ -1,0 +1,14 @@
+<apex:page >
+    <apex:form >
+        <script>
+        function show()
+        {
+            var username='{!$User.FirstName}';
+            var accountname='{!Account}';
+             alert('UserName::--::'+username+'::Account::'+accountname);
+            //alert('hi');
+        }
+        </script>
+        <apex:commandButton value="click" onclick="show()"/>
+    </apex:form>
+</apex:page>

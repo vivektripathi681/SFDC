@@ -1,0 +1,17 @@
+<apex:page controller="Accccop">
+    <apex:form >
+        <apex:commandButton value="click" action="{!show}"/>
+        <apex:dataList value="{!acc}" var="a">
+            <apex:outputLabel > Account Name:{!a.Name}::Account.phone{!a.phone}
+            </apex:outputLabel>
+            <apex:dataList value="{!a.Contacts}" var="b">
+                <apex:outputLabel > Contact AssistantName:{!b.AssistantName}:: Contact.Assistantphone{!b.Assistantphone}
+                </apex:outputLabel>
+                <apex:dataList value="{!a.Opportunities}" var="c">
+                    <apex:outputLabel > opportunity.Amount {!c.Amount}
+                    </apex:outputLabel>
+                </apex:dataList>
+            </apex:dataList>
+        </apex:dataList>
+    </apex:form>
+</apex:page>

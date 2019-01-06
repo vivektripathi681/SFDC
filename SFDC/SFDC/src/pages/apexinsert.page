@@ -1,0 +1,10 @@
+<apex:page >
+    <apex:sectionHeader title="Account" subtitle="New Page"/>
+    <apex:insert name="header"/>
+    <br/>
+    <apex:pageBlock title="VivekAlpana">
+        Hiiiiii
+    </apex:pageBlock>
+     <br/>
+    <apex:insert name="Body"/>
+</apex:page>

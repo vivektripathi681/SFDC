@@ -1,0 +1,8 @@
+<aura:component controller="billcontroller">
+    <aura:attribute name="Bill" type="Bill__c[]"/>
+    
+    <ui:button label="Get Bill" press="{!c.getBill}"/>
+    <aura:iteration var="Bill__c" items="{!v.Bill}">
+    	<p>{!Bill__c.Name} : {!Bill__c.Bill_End_Date__c}</p>
+    </aura:iteration>
+</aura:component>

@@ -1,0 +1,21 @@
+<apex:page >
+    <apex:form >
+    <apex:pageBlock title="First block">
+    <apex:pageBlockSection title="First section">
+        <br/>Hi<br/>janu
+     </apex:pageBlockSection> 
+        <apex:pageBlockSection title="Second section" collapsible="false">
+            <br/>how are you
+        </apex:pageBlockSection>
+     <apex:pageBlockSection title="Output Labels">
+      <apex:outputLabel >
+         Jyoti
+         </apex:outputLabel>
+         
+         <br/> <apex:outputLabel >
+             Siddhi
+         </apex:outputLabel>
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+          </apex:form> 
+        </apex:page>

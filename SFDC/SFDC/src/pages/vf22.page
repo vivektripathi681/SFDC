@@ -1,0 +1,26 @@
+<apex:page >
+    
+    <apex:form >
+    <apex:outputLabel >
+     <br/> Name
+    </apex:outputLabel>
+        <apex:inputText tabindex="1"/><br/> 
+    <apex:outputLabel >
+     <br/> Phone Number 
+     </apex:outputLabel>
+        <apex:inputSecret tabindex="10"/><br/>
+      <apex:outputLabel >
+      <br/>Address   
+      </apex:outputLabel>
+        <apex:inputText size="1"/><br/>
+      <apex:outputLabel >
+       <br/> City
+      </apex:outputLabel>
+        <apex:inputText maxlength="1"/><br/>
+        <apex:inputCheckbox /><br/>
+      <apex:outputLabel >
+          <br/> Mail ID
+      </apex:outputLabel>
+      <apex:inputTextarea cols="2" rows="2"/>
+        </apex:form>                               
+        </apex:page>

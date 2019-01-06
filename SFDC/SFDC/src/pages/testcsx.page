@@ -1,0 +1,19 @@
+<apex:page showHeader="false" sidebar="false"  docType="html-5.0" applyBodyTag="false" applyHtmlTag="false" renderAs="pdf">
+<html lang="en-us" dir="ltr">
+	<head>
+        <style>
+            @page {
+                @top-center {
+                    content: "Sample Header Test";
+                    background-image: url('{!$Resource.Con_Header}');
+                }
+                @bottom-center {
+                    content: "Page " counter(page) " of " counter(pages);
+                }
+            }
+        </style>
+	    </head>
+        <body>
+        </body>
+ </html>
+</apex:page>

@@ -1,0 +1,6 @@
+<apex:page id="Thepage">
+    <apex:tabPanel switchType="client" selectedTab="name 1" id="theTabPanel">
+        <apex:tab label="one" name="name 1" id="tabone">content for tab one alpana</apex:tab>
+        <apex:tab label="two" name="name 2" id="tabtwo">content for tab two vivek</apex:tab>
+    </apex:tabPanel>
+</apex:page>

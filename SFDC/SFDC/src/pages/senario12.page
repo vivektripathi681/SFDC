@@ -1,0 +1,14 @@
+<apex:page controller="ChartController">
+     <apex:chart height="340" width="400" animate="true" data="{!data}">
+         <apex:legend position="bottom"/>
+         <apex:axis type="Numeric" position="left" fields="data1,data2" title="closed won" grid="true">
+             <apex:chartLabel />
+             </apex:axis>
+         <apex:axis type="Category" position="bottom" fields="name" title="201">
+             <apex:chartLabel rotate="100"/>
+             </apex:axis>
+         <apex:areaSeries axis="left" xField="name" tips="true" yField="data1,data2" title="AlpanaMamta"/>
+         <apex:lineSeries axis="left" fill="true" xField="name" yField="data3"
+          markerType="cross" markerSize="10" markerFill="Red"/>
+    </apex:chart>
+</apex:page>

@@ -1,0 +1,41 @@
+<apex:page standardController="Account"  title="AccountMap" id="a">
+    <apex:outputText id="Name"></apex:outputText>
+    <apex:outputText >{!Account.site}</apex:outputText>
+    <script src ="http://google.com/maps?file=api">
+    </script>
+    <script type="text/javascript">
+    var map=null;
+    var geocoder=null;
+    var address="{!Account.Site};//{!Account.BillingStreet},{!Account.BillingPostalCode},{!Account.BillingCity},{!Account.BillingState},{!Account.BillingCountry};
+    function initialize()
+    {
+    if(GBrowserIsCompatible())
+        {
+        map=newGmap2(document.getElementById("MyMap"));
+        map.addControl(new GMapTypeControl());
+        map.addControl(new GLargeMapControled());
+        geoCoder=new GClientGeoCoder();
+        geocoder.getLatLng(address,function(Point)
+         {if(!Point)
+             { 
+                 document.getElementById("MyMap").innerHTML=address+"not found";
+              }
+          else
+              {
+                  map.SetCenter(Point,1);
+                  var marker=new Gmarker(Point);
+                  map.addOverlay(Marker);
+                  marker.BindInfoWindowHTML("Account Name:<b><i>{!Account.Name}</i></b> Address:"+address);
+			  }
+          }
+        );
+        }
+    }
+    </Script>
+    <div id="MyMap" style ="Width:10%;Height:20px"></div>
+    <script>
+        initialize();
+    </script>
+    } 
+    }
+</apex:page>

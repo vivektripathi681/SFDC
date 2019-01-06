@@ -1,0 +1,4 @@
+<apex:page standardController="Bill__c" >
+    Hello {!$User.FirstName}!
+    <p>You are viewing the {!Bill__c.Customer__c} account.</p>
+</apex:page>

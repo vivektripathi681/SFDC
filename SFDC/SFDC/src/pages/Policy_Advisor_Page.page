@@ -1,0 +1,48 @@
+<apex:page standardController="Customer_Information__c" extensions="PolicySuggestCTRL" title="Insurance Policy Advisor ">
+<!---Create the form for input and output fields for the Customer Information---->
+<apex:form >
+<!---Page block for taking customer Information --->
+<apex:pageBlock title="Customer Information" mode="Edit" rendered="{!renderEdit}" >
+<apex:pageBlockSection columns="2" title="Contact Information">
+<apex:inputField value="{!customer.Name}"/>
+<br/>
+<apex:inputField value="{!customer.Phone__c}"/>
+<apex:inputField value="{!customer.Email__c}"/>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Personal Information" columns="1">
+<apex:inputField value="{!customer.Age__c}"/>
+<apex:inputField value="{!customer.Occupation__c}"/>
+<apex:inputField value="{!customer.Married__c}"/>
+<apex:inputField value="{!customer.Number_of_Dependents__c}"/>
+<apex:inputField value="{!customer.Any_pre_existing_medical_condition__c}"/>
+<apex:inputField value="{!customer.Pre_existing_medical_condition__c}"/>
+</apex:pageBlockSection>
+<apex:pageBlockButtons location="bottom" >
+<apex:commandButton value="Save" action="{!save}" />
+<apex:commandButton value="Cancel"/>
+</apex:pageBlockButtons>
+</apex:pageBlock>
+<!------Page Block to show the customer detail with Suggested Policies---->
+<apex:pageBlock title="Customer Information" mode="Read only" rendered="{!renderDetail}">
+<apex:pageBlockSection columns="2" title="Contact Information">
+<apex:outputField value="{!selectedCustomer.Name}"/>
+<br/>
+<apex:outputField value="{!selectedCustomer.Phone__c}"/>
+<apex:outputField value="{!selectedCustomer.Email__c}"/>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Personal Information" columns="2">
+<apex:outputField value="{!selectedCustomer.Age__c}"/>
+<apex:outputField value="{!selectedCustomer.Occupation__c}"/>
+<apex:outputField value="{!selectedCustomer.Married__c}"/>
+<apex:outputField value="{!selectedCustomer.Number_of_Dependents__c}"/>
+<apex:outputField value="{!selectedCustomer.Any_pre_existing_medical_condition__c}"/>
+<apex:outputField value="{!selectedCustomer.Pre_existing_medical_condition__c}"/>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Suggested Policies" columns="1">
+<apex:repeat var="policy" value="{!suggestedPolicies}">
+<apex:outputField value="{!policy.Name}"/>
+</apex:repeat>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+ </apex:page>

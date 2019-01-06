@@ -1,0 +1,24 @@
+<apex:page standardController="Bill__c" recordSetVar="Bill" sidebar="false">
+<apex:form >
+  <apex:pageBlock >
+ <apex:pageBlockButtons location="Bottom">
+<apex:commandButton value="Save" action="{!save}"/>
+<apex:commandButton value="Cancel" action="{!cancel}"/>
+     <apex:commandButton value="Quicksave" action="{!Quicksave}"/>
+<apex:commandButton value="List" action="{!List}"/>
+     <apex:commandButton value="First" action="{!First}"/>
+<apex:commandButton value="Last Record" action="{!Last}"/>
+     <apex:commandButton value="Next" action="{!Next}"/>
+<apex:commandButton value="Previous" action="{!Previous}"/>
+     
+</apex:pageBlockButtons> 
+ 
+<apex:pageBlockTable value="{!Bill}" var="p">
+<apex:column value="{!p.name}"/>
+<apex:column value="{!p.Total_Billing__c}"/>
+<apex:column value="{!p.Call_Chatges__c}"/>
+<apex:column value="{!p.SMS_Charges__c}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

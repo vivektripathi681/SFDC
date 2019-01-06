@@ -1,0 +1,9 @@
+<apex:page controller="SExample1">
+    <apex:pageBlock >
+        <apex:outputLabel > {!test}
+        </apex:outputLabel>
+        <apex:dataList value="{!name}" var="a">{!a}
+        </apex:dataList>
+    </apex:pageBlock>
+    
+</apex:page>

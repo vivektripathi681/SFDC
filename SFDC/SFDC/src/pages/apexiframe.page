@@ -1,0 +1,6 @@
+<apex:page >
+    <apex:sectionHeader title="VFpage" subtitle="insertpage"/>
+    <apex:form >
+        <apex:iframe frameborder="false" height="2000px" scrolling="false" src="https://alpanapoc-dev-ed.my.salesforce.com/_ui/common/apex/debug/ApexCSIPage"/>
+    </apex:form>
+</apex:page>

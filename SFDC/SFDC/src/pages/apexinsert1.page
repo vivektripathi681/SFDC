@@ -1,0 +1,20 @@
+<apex:page >
+    <apex:composition template="apexinsert">
+        <apex:define name="header">
+            <apex:form >
+                <apex:outputLabel >slect Industry</apex:outputLabel>
+                <apex:selectList size="1">
+                    <apex:selectOption itemLabel="Govt" itemValue="govt"/>
+            <apex:selectOption itemLabel="Banking" itemValue="bank"/>
+            <apex:selectOption itemLabel="IT" itemValue="it"/>
+            <apex:selectOption itemLabel="Finance" itemValue="fin"/>
+              </apex:selectList>
+            </apex:form>
+        </apex:define>
+        <apex:define name="body">
+            <div style="background-color:yellow;width:200px;"/>
+        </apex:define>
+        
+    </apex:composition>
+    <apex:include pageName="apexinclude"/>
+</apex:page>

@@ -1,0 +1,14 @@
+<apex:page >
+<apex:form >
+ 
+ <apex:outputLabel >
+     <br/>Select State
+</apex:outputLabel> 
+    <apex:selectList size="1">
+        <apex:selectOption itemLabel="None" itemValue="none"></apex:selectOption>
+         <apex:selectOption itemLabel="AP" itemValue="Two"></apex:selectOption>
+        <apex:selectOption itemLabel="UP" itemValue="three"></apex:selectOption>
+    </apex:selectList>
+        
+</apex:form>     
+</apex:page>

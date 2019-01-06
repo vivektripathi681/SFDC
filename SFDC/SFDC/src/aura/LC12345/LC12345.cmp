@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute name="first" type="String" default="ALPANA"/>
+<aura:attribute name="last" type="String" default="TRIPATHI"/>
+
+<ui:inputText label="First Name" value="{!v.first}" updateOn="keyup"/>
+<ui:inputText label="Last Name" value="{!v.last}" updateOn="keyup"/>
+
+<!-- Returns "ALPANA TRIPATHI " -->
+<ui:outputText value="{!v.first +' '+ v.last}"/>
+	
+</aura:component>

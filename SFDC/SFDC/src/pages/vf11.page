@@ -1,0 +1,8 @@
+<apex:page >
+    <apex:form >
+<apex:pageBlock title="First Block" helpTitle="need help" helpUrl="http://www.google.com">
+Hi<br/> i am ALPANA <br/> This is another sample
+ <apex:commandButton value="SAVE" action="{!save}" dir="VIVEK" disabled="false"/> 
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

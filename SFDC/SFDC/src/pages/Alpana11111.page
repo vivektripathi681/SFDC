@@ -1,0 +1,5 @@
+<apex:page >
+<apex:pageMessage title="Sample" severity="info" strength="3" detail="strict warning">
+</apex:pageMessage>
+    
+</apex:page>

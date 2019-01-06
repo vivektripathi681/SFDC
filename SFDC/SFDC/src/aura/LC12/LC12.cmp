@@ -1,0 +1,12 @@
+<aura:component >
+    <div class="white">
+    Hi Mamta
+        <h1> Component Composition </h1>
+        <ul>
+            <li class="red"> i am red </li>   
+             <li class="blue"> i am blue </li> 
+             <li class="pink"> i am pink </li> 
+            
+        </ul>
+    </div>
+</aura:component>

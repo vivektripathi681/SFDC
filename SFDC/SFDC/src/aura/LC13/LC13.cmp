@@ -1,0 +1,4 @@
+<aura:component controller="ServerSideController">
+    <aura:attribute name="firstName" type="String" default="Vivek"/>
+    <ui:button label="Call server" press="{!c.echo}"/>
+</aura:component>

@@ -1,0 +1,20 @@
+<apex:page standardController="account">
+    <apex:pageBlock title="Hello{!$User.FirstName}!">
+    </apex:pageBlock> 
+    <apex:detail subject="{!$CurrentPage.parameters.cid}" relatedList="false" title="false"/>
+   <apex:pageBlock title="contacts">
+       <apex:dataTable value="{!account.contacts}" var="contact" cellpadding="4" border="1">
+           <apex:column >
+               <apex:facet name="header">Name
+               </apex:facet>
+               {!contact.Name}	
+           </apex:column>
+           <apex:column >
+<apex:facet name="header">Phone
+               </apex:facet>
+				{!contact.Phone}               
+           </apex:column>
+       </apex:dataTable>
+    </apex:pageBlock>
+    
+</apex:page>

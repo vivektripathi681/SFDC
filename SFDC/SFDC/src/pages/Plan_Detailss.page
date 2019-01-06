@@ -1,0 +1,16 @@
+<apex:page standardController="Plan__c" renderAs="pdf" applyBodyTag="TRUE" >
+<apex:form >
+<apex:pageBlock title="Position Record VA " mode="edit">
+<apex:pageBlockButtons >
+<apex:commandButton action="{!save}" value="Save"/>
+</apex:pageBlockButtons>
+<apex:pageBlockSection title="Position Information" columns="2">
+<apex:inputField value="{!Plan__c.name}"/>
+<apex:inputField value="{!Plan__c.Plan_Duration__c}"/>
+<apex:inputField value="{!Plan__c.Plan_Number__c}"/>
+<apex:inputField value="{!Plan__c.Price__c}"/>
+<apex:inputField value="{!Plan__c.Call_Rate_Minutes__c}"/>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>
